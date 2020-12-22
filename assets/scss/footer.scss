@@ -1,0 +1,106 @@
+.c-footer{
+    background: #282e33;
+    line-height: normal;
+    font-size: 14px;
+    color: #fafafa;
+    h2{
+        padding: 32px;
+    }
+    @include breakpoint(pc){
+        h2{
+            padding-top: 48px;
+            padding-bottom: 64px;
+            img{
+                width: 200px;
+            }
+        }
+    }
+    @include breakpoint(sp){
+        >div{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+.c-menu-ft{
+    >li{
+        a{
+            display: block;
+        }
+    }
+    @include breakpoint(pc){
+        display: flex; display: -webkit-flex; /* Safari */ display: -moz-flex; /* Firefox */ display: -ms-flex;
+        >li{
+            width: 25%;
+            >p{
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+            a{
+                margin: 0 2rem .5rem -1rem;
+                padding: .5rem 1rem;
+                font-size: .875rem;
+                transition: all .15s ease-in-out;
+                &:hover {
+                    background: hsla(0,0%,98%,.08);
+                }
+            }
+        }
+    }
+    @include breakpoint(sp){
+        border-top: 1px solid rgba(241,241,243,.16);
+        >li{
+            padding: 24px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(241,241,243,.16);
+            >a:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 1rem;
+                height: 1rem;
+                -webkit-transform: translateY(-50%) rotate(-90deg);
+                transform: translateY(-50%) rotate(-90deg);
+                background-image: url(../img/common/down-white-icon.svg);
+                background-repeat: no-repeat;
+                background-position: 100%;
+            }
+            p{
+                background-image: url(../img/common/down-white-icon.svg);
+                background-repeat: no-repeat;
+                background-position: 100%;
+            }
+            a {
+                margin: 0;
+                position: relative;
+            }
+            >div{
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: .25s;
+                &.is-active{
+                    height: auto;
+                    margin: 1rem 0 0;
+                    padding: 5px;
+                    opacity: 1;
+                }
+                >a {
+                    padding: 19px 32px;
+                }
+            }
+            hr {
+                height: 1px;
+                margin: 1.5rem -24px;
+                border: 0;
+                background: rgba(241,241,243,.16);
+            }
+        }
+    }
+}
+.c-copy{
+    padding: 48px 24px;
+}

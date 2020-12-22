@@ -1,0 +1,88 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+	*zoom: 1;
+	&:after{
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+$baseWidth:960px;
+$bl: #282e33;
+$mainFonts : "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+@mixin gradient-h($gradient-h, $gradient-h1) {
+    background-color: $gradient-h1; /* fallback color if gradients are not supported */
+    background-image: -webkit-linear-gradient(left, $gradient-h1, $gradient-h 50%); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image:    -moz-linear-gradient(to right, $gradient-h 50%, $gradient-h1 100%); /* For Firefox (3.6 to 15) */
+    background-image:      -o-linear-gradient(to right, $gradient-h 50%, $gradient-h1 100%); /* For old Opera (11.1 to 12.0) */ 
+    background-image:         linear-gradient(to right, $gradient-h 50%, $gradient-h1 100%); /* Standard syntax; must be last */
+}
+@mixin gradient-v($gradient-v, $gradient-v1) {
+    background-color: $gradient-v1; /* fallback color if gradients are not supported */
+    background-image: -webkit-linear-gradient(top, $gradient-v1, $gradient-v 50%); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image:    -moz-linear-gradient(to bottom, $gradient-v 50%, $gradient-v1 100%); /* For Firefox (3.6 to 15) */
+    background-image:      -o-linear-gradient(to bottom, $gradient-v 50%, $gradient-v1 100%); /* For old Opera (11.1 to 12.0) */ 
+    background-image:         linear-gradient(to bottom, $gradient-v 50%, $gradient-v1 100%); /* Standard syntax; must be last */
+}
+@mixin transform($a) {
+    transform:$a;
+    -webkit-transform:$a;
+    -moz-transform: $a;
+    -ms-transform:$a;
+    -o-transform: $a;
+}
+@mixin transition($a) {
+    transition:$a;
+    -webkit-transition:$a;
+    -moz-transition: $a;
+    -ms-transition:$a;
+    -o-transition: $a;
+}
+@mixin transition-delay($a){
+    -o-transition-delay: $a;
+    transition-delay: $a;
+    -webkit-transition-delay: $a;
+    -moz-animation-delay: $a;
+}
+@mixin animation($animation) {
+	-webkit-animation: $animation;
+	animation: $animation;
+}
+@mixin animation-delay($a){
+    animation-delay: $a;
+    -webkit-animation-delay: $a;
+    -o-animation-delay: $a;
+    -moz-animation-delay: $a;
+}
+@mixin box-shadow($a) {
+    -webkit-box-shadow: $a;
+    -moz-box-shadow: $a;
+     box-shadow: $a;
+}
+@mixin calc($type,$calc1,$calc2) {
+	#{$type}: -moz-calc(#{$calc1}  - #{$calc2});
+	#{$type}: -webkit-calc(#{$calc1} - #{$calc2});
+	#{$type}: -o-calc(#{$calc1} - #{$calc2});
+	#{$type}: calc(#{$calc1} - #{$calc2});
+	#{$type}: -ms-(#{$calc1} - #{$calc2});
+}
+@mixin calcplus($type,$calc1,$calc2) {
+	#{$type}: -moz-calc(#{$calc1}  + #{$calc2});
+	#{$type}: -webkit-calc(#{$calc1} + #{$calc2});
+	#{$type}: -o-calc(#{$calc1} + #{$calc2});
+	#{$type}: calc(#{$calc1} + #{$calc2});
+	#{$type}: -ms-(#{$calc1} + #{$calc2});
+}
+//============================================
+// breakpoint
+//============================================
+@mixin breakpoint($point) {
+	@if $point == pc {
+		@media only screen and (min-width: 959px) { @content ; }
+	}
+	@else if $point == sp {
+		@media only screen and (max-width: 960px) { @content ; }
+	}
+}

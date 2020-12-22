@@ -1,0 +1,54 @@
+.l-security__info{
+    .p-item-pri{
+        ol{
+            padding: 3rem 0 1rem 1rem;
+            margin-bottom: 1rem;
+            list-style-type: decimal;
+            >li{
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+.l-security__box{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: row;
+    >div{
+        margin-left: 32px;
+    }
+    dl{
+        flex-direction: row;
+        margin-bottom: 1rem;
+        >dt{
+            width: 20%;
+            margin: 0 0 8px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        >dd{
+            width: 75%;
+            margin: 0 0 8px 2%;
+            font-size: 14px;
+        }
+    }
+    @include breakpoint(pc){
+        >figure{
+            width: 240px;
+        }
+        >div{
+            width: 496px;
+        }
+    }
+    @include breakpoint(sp){
+        flex-direction: column;
+        >figure{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        >div{
+            margin-left: 0px;
+        }
+    }
+}
