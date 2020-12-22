@@ -52,18 +52,18 @@ export default {
             state.posts5=posts5
         },
     },
-    computed: {
-        postFilter(){
-            var self = this
-            return this.posts.filter(function(post){
-                return post.title.rendered.toLowerCase().includes(self.nameFilter.toLowerCase());
-            });
-        },
-       catFilter(){
-            return this.categories.filter(function(category){
-                return category.id;
-            });
-        }
-    },
+    // computed: {
+    //     postFilter(){
+    //         var self = this
+    //         return this.posts.filter(function(post){
+    //             return post.title.rendered.toLowerCase().includes(self.nameFilter.toLowerCase());
+    //         });
+    //     },
+    //    catFilter(){
+    //         return this.categories.filter(function(category){
+    //             return category.id;
+    //         });
+    //     }
+    // },
    
 }
