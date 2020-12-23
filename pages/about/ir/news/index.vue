@@ -40,9 +40,6 @@ export default {
             'categories',
         ]), 
         methods: {
-            moment(date) {
-                return moment(date);
-            },
             date: function (date) {
                 return moment(date).format('YYYY/MM/DD');
             },
@@ -62,30 +59,6 @@ export default {
       },
  
 }
-
-
-// export default {
-//     head() {
-//         return {
-//             posts: [],
-//         }
-//     },
-//     methods: {
-//          async fetchSomething() {
-//              this.posts =  await this.$axios.$get("http://103.77.160.168/~aglstaff/ngochen/task13/wp-json/wp/v2/posts/")
-//                         .then(response => {
-//                             console.log(response.json())
-//                             return this.posts = response.json();
-//                         })
-//                         .catch( error => {
-//                         window.alert( error );
-//                         } );
-//             console.log(this.posts)
-//         }
-//     },
-//     mounted() { 
-//     }
-// }
         
 
 </script>
