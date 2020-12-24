@@ -5,7 +5,7 @@
                 <h3>最新IRニュース</h3>
                 <div class="flex flex-jus-center">
 
-                    <div  class="l-ir--news__info">
+                    <!-- <div  class="l-ir--news__info">
                         <ul class="l-news">
                             <li  v-for="(post, index) in posts" v-bind:key="index">
                                 <a href="/files/2020082807052003981.pdf" target="_blank" rel="noreferrer noopener"><span class="date">
@@ -15,7 +15,7 @@
                             </li>      
                         </ul>
                         
-                    </div>
+                    </div> -->
                 </div>
                
                 
@@ -29,36 +29,36 @@
 
 <script>
 
-import { mapState } from 'vuex'
-export default {
-        mounted () {
-            this.$store.dispatch('loadPosts'),
-            this.$store.dispatch('loadCats')
-        },
-        computed: mapState([
-            'posts',
-            'categories',
-        ]), 
-        methods: {
-            date: function (date) {
-                return moment(date).format('YYYY/MM/DD');
-            },
-            getCategory(category) {
-                // console.log(category)
-                // console.log(this.categories)
-                var name ="";
-                this.categories.forEach(element => {
-                    if(element.id == category){
-                        console.log(category)
-                         name =  element.name;
-                    }
-                });
-                return name;
+// import { mapState } from 'vuex'
+// export default {
+//         mounted () {
+//             this.$store.dispatch('loadPosts'),
+//             this.$store.dispatch('loadCats')
+//         },
+//         computed: mapState([
+//             'posts',
+//             'categories',
+//         ]), 
+//         methods: {
+//             date: function (date) {
+//                 return moment(date).format('YYYY/MM/DD');
+//             },
+//             getCategory(category) {
+//                 // console.log(category)
+//                 // console.log(this.categories)
+//                 var name ="";
+//                 this.categories.forEach(element => {
+//                     if(element.id == category){
+//                         console.log(category)
+//                          name =  element.name;
+//                     }
+//                 });
+//                 return name;
                
-            }
-      },
+//             }
+//       },
  
-}
+// }
         
 
 </script>

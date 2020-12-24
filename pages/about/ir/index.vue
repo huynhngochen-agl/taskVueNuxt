@@ -8,14 +8,14 @@
                 <h3 class="c-title4">最新IRニュース</h3>
                 <div class="flex flex-jus-center">
                     <div class="l-ir2--info">
-                        <ul class="l-news">
+                        <!-- <ul class="l-news">
                             <li  v-for="(post, index) in posts5" v-bind:key="index">
                                 <a href="/files/2020082807052003981.pdf" target="_blank" rel="noreferrer noopener"><span class="date">
                                 <p>{{ date(post.modified)}}</p></span>
                                 <span class="category" >{{getCategory(post.categories)}}</span>
                                 <p>{{post.title.rendered}}<i class="u-pdf"></i></p></a>
                             </li>      
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
                 <div class="l-ir2--btn text-center">
@@ -75,37 +75,37 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-export default {
-        mounted () {
-            this.$store.dispatch('loadPosts5'),
-            this.$store.dispatch('loadCats')
-        },
-        computed: mapState([
-            'posts5',
-            'categories',
-        ]), 
-        methods: {
-            moment(date) {
-                return moment(date);
-            },
-            date: function (date) {
-                return moment(date).format('YYYY/MM/DD');
-            },
-            getCategory(category) {
-                // console.log(category)
-                // console.log(this.categories)
-                var name ="";
-                this.categories.forEach(element => {
-                    if(element.id == category){
-                        console.log(category)
-                         name =  element.name;
-                    }
-                });
-                return name;
+// import { mapState } from 'vuex'
+// export default {
+//         mounted () {
+//             this.$store.dispatch('loadPosts5'),
+//             this.$store.dispatch('loadCats')
+//         },
+//         computed: mapState([
+//             'posts5',
+//             'categories',
+//         ]), 
+//         methods: {
+//             moment(date) {
+//                 return moment(date);
+//             },
+//             date: function (date) {
+//                 return moment(date).format('YYYY/MM/DD');
+//             },
+//             getCategory(category) {
+//                 // console.log(category)
+//                 // console.log(this.categories)
+//                 var name ="";
+//                 this.categories.forEach(element => {
+//                     if(element.id == category){
+//                         console.log(category)
+//                          name =  element.name;
+//                     }
+//                 });
+//                 return name;
                
-            }
-      },
+//             }
+//       },
  
-}
+// }
 </script>
