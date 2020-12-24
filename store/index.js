@@ -50,7 +50,7 @@ export default {
     actions:{
         loadPosts({commit}){
             axios
-            .get('http://103.77.160.168/~aglstaff/ngochen/taskVueNuxt/wp-json/wp/v2/posts/')
+            .get('https://103.77.160.168/~aglstaff/ngochen/taskVueNuxt/wp-json/wp/v2/posts/')
             .then(res=>res.data)
             .then(posts=>{
                 commit('SET_COURSES',posts)
@@ -58,7 +58,7 @@ export default {
         },
         loadCats({commit}){
             axios
-            .get('http://103.77.160.168/~aglstaff/ngochen/taskVueNuxt/wp-json/wp/v2/categories/')
+            .get('https://103.77.160.168/~aglstaff/ngochen/taskVueNuxt/wp-json/wp/v2/categories/')
             .then(res=>res.data)
             .then(categories=>{
                 commit('SET_CATEGORIES',categories)
@@ -66,7 +66,7 @@ export default {
         },
         loadPosts5({commit}){
             axios
-            .get('http://103.77.160.168/~aglstaff/ngochen/taskVueNuxt/wp-json/wp/v2/posts/?per_page=5')
+            .get('https://103.77.160.168/~aglstaff/ngochen/taskVueNuxt/wp-json/wp/v2/posts/?per_page=5')
             .then(res=>res.data)
             .then(posts5=>{
                 commit('SET_5POSTS',posts5)
