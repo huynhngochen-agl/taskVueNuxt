@@ -15,7 +15,7 @@
                             </div>
                             <div class="text-center pdt15 u-pd--bt">
                                 <!-- <button class="c-btn2">送信</button> -->
-                                <a href="/contact/privacypolicy/complete" class="c-btn2 flex flex-align-item-center flex-jus-center">送信</a>
+                                <nuxt-link class="c-btn2 flex flex-align-item-center flex-jus-center" to="/contact/privacypolicy/complete">送信</nuxt-link>
                             </div>
                         </form>
                     </div>

@@ -4,10 +4,10 @@
                 <h2 class="c-title3 text-center"><span>IRニュース</span><small class="mont">IR News</small></h2>
                 <div class="l-presroom1--menu flex flex-jus-center flex-align-item-center">
                     <ul class="flex flex-jus-start">
-                        <li><a href="/about/ir/news/latest_year/">最新1年分</a></li>
-                        <li><a href="/about/ir/news/2020/">2020</a></li>
+                       <li><nuxt-link to="/about/ir/news/latest_year/">最新1年分</nuxt-link></li>
+                        <li><nuxt-link to="/about/ir/news/2020/">2020</nuxt-link></li>
                         <li><span>2019</span></li>
-                        <li><a href="/about/ir/news/2018/">2018</a></li>
+                        <li><nuxt-link to="/about/ir/news/2018/">2018</nuxt-link></li>
                     </ul>
                 </div>
                 <div class="flex flex-jus-center">

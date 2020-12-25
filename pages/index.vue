@@ -77,39 +77,17 @@
                         ニュース<small class="mont">News</small>
                     </h2>
                     <ul class="l-news">
-                        <li>
-                            <a href="" target="_blank">
-                            <span class="date">2020/8/28</span><span class="category">IR</span>
-                            <p>特別損失の計上に関するお知らせ<i class="u-pdf"></i></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" target="_blank">
-                            <span class="date">2020/8/28</span><span class="category">PR</span>
-                            <p>「人生観が変わりました！」人気急上昇中・3時のヒロイン 福田 麻貴さんがウェディングドレス試着に人生初挑戦！！</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" target="_blank">
-                            <span class="date">2020/8/28</span><span class="category">PR</span>
-                            <p>コロナ禍で子育ての悩みや困りごとが増加した家庭が70%、3歳からのはぐくみメディア『おやこのくふう』をリリース</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" target="_blank">
-                            <span class="date">2020/8/28</span><span class="category">IR</span>
-                            <p>投資事業有限責任組合の設立に関するお知らせ<i class="u-pdf"></i></p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" target="_blank">
-                            <span class="date">2020/8/28</span><span class="category">IR</span>
-                            <p>業績予想に関するお知らせ<i class="u-pdf"></i></p>
-                            </a>
+                        <li  v-for="(pressroom, index) in pressroom5" v-bind:key="index">
+                                <nuxt-link target="_blank" to="/files/2020082807052003981.pdf">
+                                    <span class="date">{{ date(pressroom.modified)}}</span>
+                                <span class="category" v-for="(test, index) in getCategory(pressroom.categories)" v-bind:key="index">
+                                    {{test}}</span>
+                                <p>{{pressroom.title.rendered}}<i class="u-pdf"></i></p></nuxt-link>
                         </li>
                     </ul>
                     <div class="c-list-btn flex flex-jus-center flex-container">
-                        <a class="c-btn1" href="/about/pressroom">プレスルームはこちら</a><a class="c-btn1" href="/about/ir/news">IRニュースはこちら</a>
+                        <nuxt-link class="c-btn1" to="/about/pressroom">プレスルームはこちら</nuxt-link>
+                        <nuxt-link class="c-btn1" to="/about/ir/news">IRニュースはこちら</nuxt-link>
                     </div>
                 </div>
             </section>
@@ -117,9 +95,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   head() {
     return {
+        data: {
+            tests: [],
+        },
        script: [
         {
           src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
@@ -133,7 +116,38 @@ export default {
       ],
     };
   },
-  methods: {},
+  mounted () {
+            this.$store.dispatch('loadPressrooms5'),
+            this.$store.dispatch('loadCats')
+        },
+        computed: mapState([
+            'pressroom5',
+            'categories',
+        ]), 
+        methods: {
+            date: function (date) {
+                return moment(date).format('YYYY/MM/DD');
+            },
+            getCategory(category) {
+                // console.log(category)
+                // console.log(this.categories)
+                var name = new Array();
+               for (let index = 0; index < category.length; index++) {
+                   const test = category[index];
+                //    console.log(element)
+                    this.categories.forEach(element => {
+                        if(element.id == test){
+                            name[index] = element.name;
+                            console.log(name)
+                        }
+                });
+                
+               }
+            //     this.tests = name;
+            //    console.log(this.tests)
+            return name;
+            }
+      },
 }
 </script>
 

@@ -20,7 +20,8 @@
                
                 
                 <div class="l-news--btn text-center">
-                    <a class="c-btn2 flex flex-align-item-center flex-jus-center" href="/about/ir/news/latest_year/"><span>IRニュース一覧はこちら</span></a>
+                    <nuxt-link class="c-btn2 flex flex-align-item-center flex-jus-center" to="/about/ir/news/latest_year/">
+                        <span>IRニュース一覧はこちら</span></nuxt-link>
                 </div>
             </section>
         </main>

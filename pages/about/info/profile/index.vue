@@ -13,7 +13,7 @@
                             <p>〒108-0073</p>
                             <p>東京都港区三田1-4-28</p>
                             <p>三田国際ビル 23階</p>
-                            <a class="u-link__blue c-hover1--target" href="/about/info/access">アクセス</a>
+                            <nuxt-link class="u-link__blue c-hover1--target" to="/about/info/access">アクセス</nuxt-link>
                         </dd>
                     </dl>
                     <dl>
@@ -28,7 +28,7 @@
                         <dt>代表者</dt>
                         <dd>
                             <p>代表取締役　堀口 育代<br>代表取締役　新野 将司</p>
-                            <a class="u-link__blue c-hover1--target" href="/about/info/boards">役員一覧</a>
+                            <nuxt-link class="u-link__blue c-hover1--target" to="/about/info/boards">役員一覧</nuxt-link>
                         </dd>
                     </dl>
                     <dl>

@@ -8,31 +8,31 @@
                     <li>
                         <p>企業・グループ情報</p>
                         <div class="c-menu-ft--child">
-                            <a href="/about/info">企業・グループ情報トップ</a>
-                            <a href="/about/info/philosophy">企業理念</a>
-                            <a href="/about/info/products">事業・サービス概要</a>
-                            <a href="/about/info/boards">役員一覧</a>
-                            <a href="/about/info/profile">会社概要</a>
-                            <a href="/about/info/access">アクセス</a>
-                            <a href="/about/info/history">沿革</a>
+                            <nuxt-link to="/about/info">企業・グループ情報トップ</nuxt-link>
+                            <nuxt-link to="/about/info/philosophy">企業理念</nuxt-link>
+                            <nuxt-link to="/about/info/products">事業・サービス概要</nuxt-link>
+                            <nuxt-link to="/about/info/boards">役員一覧</nuxt-link>
+                            <nuxt-link to="/about/info/profile">会社概要</nuxt-link>
+                            <nuxt-link to="/about/info/access">アクセス</nuxt-link>
+                            <nuxt-link to="/about/info/history">沿革</nuxt-link>
                         </div>
                     </li>
                     <li>
                         <p>株主・投資家情報</p>
                         <div class="c-menu-ft--child">
-                            <a href="/about/ir">株主・投資家情報トップ</a>
-                            <a href="/about/ir/news">IRニュース</a>
-                            <a href="/about/ir/library">IRライブラリ</a>
-                            <a href="/about/ir/financial">株式情報</a>
-                            <a href="/about/ir/calendar">IRカレンダー</a>
-                            <a href="/about/ir/notice">電子公告</a>
-                            <a href="/about/ir/disclosure_policy">ディスクロージャー・ポリシー</a>
-                            <a href="/about/ir/disclaimer">免責事項</a>
+                            <nuxt-link to="/about/ir">株主・投資家情報トップ</nuxt-link>
+                            <nuxt-link to="/about/ir/news">IRニュース</nuxt-link>
+                            <nuxt-link to="/about/ir/library">IRライブラリ</nuxt-link>
+                            <nuxt-link to="/about/ir/financial">株式情報</nuxt-link>
+                            <nuxt-link to="/about/ir/calendar">IRカレンダー</nuxt-link>
+                            <nuxt-link to="/about/ir/notice">電子公告</nuxt-link>
+                            <nuxt-link to="/about/ir/disclosure_policy">ディスクロージャー・ポリシー</nuxt-link>
+                            <nuxt-link to="/about/ir/disclaimer">免責事項</nuxt-link>
                         </div>
                     </li>
                     <li>
                         <p class="hidden_sp">プレスルーム</p>
-                        <a href="/about/pressroom">プレスルーム</a>
+                        <nuxt-link to="/about/pressroom">プレスルーム</nuxt-link>
                     </li>
                     <li>
                         <p class="hidden_sp Footer-module--dummyLabel--1HPta">採用情報</p>
@@ -40,11 +40,11 @@
                     </li>
                     <li>
                         <p class="hidden_sp">その他</p>
-                        <a href="/privacypolicy">プライバシーポリシー</a>
+                        <nuxt-link to="/privacypolicy">プライバシーポリシー</nuxt-link>
                         <hr class="hidden_pc">
-                        <a href="/security">情報セキュリティに関する方針</a>
+                        <nuxt-link to="/security">情報セキュリティに関する方針</nuxt-link>
                         <hr class="hidden_pc">
-                        <a href="/contact">お問い合わせ</a>
+                        <nuxt-link to="/contact">お問い合わせ</nuxt-link>
                     </li>
                 </ul>
                 <div class="c-copy text-center">© Kufu Company Inc.</div>

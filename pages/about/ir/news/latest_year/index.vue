@@ -5,9 +5,9 @@
                 <div class="l-presroom1--menu flex flex-jus-center flex-align-item-center">
                     <ul class="flex flex-jus-start">
                         <li><span>最新1年分</span></li>
-                        <li><a href="/about/ir/news/2020/">2020</a></li>
-                        <li><a href="/about/ir/news/2019/">2019</a></li>
-                        <li><a href="/about/ir/news/2018/">2018</a></li>
+                        <li><nuxt-link to="/about/ir/news/2020/">2020</nuxt-link></li>
+                        <li><nuxt-link to="/about/ir/news/2019/">2019</nuxt-link></li>
+                        <li><nuxt-link to="/about/ir/news/2018/">2018</nuxt-link></li>
                     </ul>
                 </div>
                 <div class="flex flex-jus-center">

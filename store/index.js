@@ -35,6 +35,8 @@ export default {
         nameFilter:'',
         categories: [],
         posts5: [],
+        pressroom5: [],
+        pressrooms: [],
       }),
       mutations: {
         SET_COURSES(state,posts){
@@ -45,6 +47,12 @@ export default {
         },
         SET_5POSTS(state,posts5){
             state.posts5=posts5
+        },
+        SET_PRESSROOMS5(state,pressroom5){
+            state.pressroom5=pressroom5
+        },
+        SET_PRESSROOMS(state,pressrooms){
+            state.pressrooms=pressrooms
         },
       },
     actions:{
@@ -72,7 +80,22 @@ export default {
                 commit('SET_5POSTS',posts5)
             })
         },
-        
+        loadPressrooms5({commit}){
+            axios
+            .get('https://103.77.160.168/~aglstaff/ngochen/taskVueNuxt/wp-json/wp/v2/pressroom/?page=2')
+            .then(res=>res.data)
+            .then(pressroom5=>{
+                commit('SET_PRESSROOMS5',pressroom5)
+            })
+        },
+        loadPressrooms({commit}){
+            axios
+            .get('https://103.77.160.168/~aglstaff/ngochen/taskVueNuxt/wp-json/wp/v2/pressroom/')
+            .then(res=>res.data)
+            .then(pressrooms=>{
+                commit('SET_PRESSROOMS',pressrooms)
+            })
+        },
     },
    
     // mutations:{
@@ -85,19 +108,6 @@ export default {
     //     SET_5POSTS(state,posts5){
     //         state.posts5=posts5
     //     },
-    // },
-    // computed: {
-    //     postFilter(){
-    //         var self = this
-    //         return this.posts.filter(function(post){
-    //             return post.title.rendered.toLowerCase().includes(self.nameFilter.toLowerCase());
-    //         });
-    //     },
-    //    catFilter(){
-    //         return this.categories.filter(function(category){
-    //             return category.id;
-    //         });
-    //     }
     // },
    
 }

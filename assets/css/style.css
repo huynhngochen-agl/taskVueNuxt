@@ -863,7 +863,7 @@ body {
 }
 
 #presroom .l-presroom1--menu > ul {
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 .l-presroom1--menu {

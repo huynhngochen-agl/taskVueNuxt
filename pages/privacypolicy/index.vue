@@ -82,7 +82,9 @@
                         </div>
                         <div class="p-item-pri">
                             <h3 class="pdt15">6. 個人情報に関するお問い合わせ等について</h3>
-                            <p class="u-p-style1">個人情報に関するお問い合わせおよび苦情・相談に関するお申し出、開示等の請求は以下のフォームよりお願いいたします。<br><a href="/contact/privacypolicy">個人情報に関するお問い合わせフォーム</a></p>
+                            <p class="u-p-style1">個人情報に関するお問い合わせおよび苦情・相談に関するお申し出、開示等の請求は以下のフォームよりお願いいたします。<br>
+                            <nuxt-link to="/contact/privacypolicy">個人情報に関するお問い合わせフォーム</nuxt-link>
+                            </p>
                         </div>
                         <div class="p-item-pri">
                             <h3 class="pdt15">7. 個人情報処理の外部委託</h3>

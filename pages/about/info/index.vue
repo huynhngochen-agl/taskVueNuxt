@@ -6,12 +6,12 @@
             </section>
            <section class="l-info2">
                 <ul class="flex flex-align-item-center flex-jus-center flex-container">
-                    <li><a href="/about/info/philosophy">企業理念</a></li>
-                    <li><a href="/about/info/products">事業・サービス概要</a></li>
-                    <li><a href="/about/info/boards">役員一覧</a></li>
-                    <li><a href="/about/info/profile">会社概要</a></li>
-                    <li><a href="/about/info/access">アクセス</a></li>
-                    <li><a href="/about/info/history">沿革</a></li>
+                    <li><nuxt-link to="/about/info/philosophy">企業理念</nuxt-link></li>
+                    <li><nuxt-link to="/about/info/products">事業・サービス概要</nuxt-link></li>
+                    <li><nuxt-link to="/about/info/boards">役員一覧</nuxt-link></li>
+                    <li><nuxt-link to="/about/info/profile">会社概要</nuxt-link></li>
+                    <li><nuxt-link to="/about/info/access">アクセス</nuxt-link></li>
+                    <li><nuxt-link to="/about/info/history">沿革</nuxt-link></li>
                 </ul>
            </section>
         </main>

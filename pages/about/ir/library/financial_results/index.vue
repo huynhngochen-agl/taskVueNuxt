@@ -3,11 +3,11 @@
             <section class="l-ir--news">
                 <h2 class="c-title3 text-center"><span>IRライブラリ</span><small class="mont">IR Library</small></h2>
                 <ul class="l-link-lib flex flex-container flex-jus-center">
-                    <li><a href="/about/ir/library/">決算短信</a></li>
-                    <li><a href="/about/ir/library/financial_reports/">有価証券<br>報告書</a></li>
+                    <li><nuxt-link to="/about/ir/library/">決算短信</nuxt-link></li>
+                    <li><nuxt-link to="/about/ir/library/financial_reports/">有価証券<br>報告書</nuxt-link></li>
                     <li class="is-on"><div>決算説明<br>資料</div></li>
-                    <li><a href="/about/ir/library/stockholders_meeting">株主総会<br>関連資料</a></li>
-                    <li><a href="/about/ir/library/other_materials">その他資料</a></li>
+                    <li><nuxt-link to="/about/ir/library/stockholders_meeting">株主総会<br>関連資料</nuxt-link></li>
+                    <li><nuxt-link to="/about/ir/library/other_materials">その他資料</nuxt-link></li>
                 </ul>
             </section>
             <section class="l-ir--library">
