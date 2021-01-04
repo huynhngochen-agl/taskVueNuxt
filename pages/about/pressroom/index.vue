@@ -18,7 +18,7 @@
                                 <span class="category" v-for="(test, index) in getCategory(pressroom.categories)" v-bind:key="index">
                                     {{test}}</span>
                                 <p>{{pressroom.title.rendered}}<i class="u-pdf"></i></p></nuxt-link>
-                        </li>
+                            </li>
                         </ul>
                         
                     </div>
@@ -74,8 +74,6 @@ export default {
                 });
                 
                }
-            //     this.tests = name;
-            //    console.log(this.tests)
             return name;
             }
       },
